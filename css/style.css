@@ -1,0 +1,200 @@
+/* Gaya dasar untuk memastikan tata letak yang benar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  .navbar-title {
+    margin: 0; /* Menghilangkan margin bawaan */
+  }
+  
+  ul {
+    list-style: none; /* Menghilangkan bullet point pada daftar menu */
+    margin: 0; /* Menghilangkan margin bawaan */
+    padding: 0; /* Menghilangkan padding bawaan */
+    display: flex;
+  }
+  
+  li {
+    margin-left: 15px; /* Memberi ruang antara setiap elemen menu (opsional) */
+  }
+  
+  /* Untuk membuat daftar menu (ul) berada di sebelah kanan */
+  .navbar ul {
+    margin-left: auto;
+  }
+  
+  /* Efek hover pada elemen menu (li) */
+  .navbar li:hover {
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  /* Transisi efek ketika berpindah dari hover */
+  .navbar li {
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  /* Menghilangkan garis bawah pada tautan */
+.navbar li a {
+    text-decoration: none;
+    color: black;
+  }
+
+  /* Gaya untuk mengatur teks menjadi tebal pada h1 */
+h1 {
+    font-weight: bold;
+  }
+  
+  /* Gaya untuk mengatur warna teks menjadi abu-abu pada p */
+  p {
+    color: gray;
+  }
+  
+  /* Gaya untuk memposisikan teks di tengah */
+  .centered-text {
+    text-align: center;
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap; /* Mengizinkan flex items (child elements) berada dalam beberapa baris */
+    gap: 20px; /* Jarak antara child elements */
+}
+
+/* Gaya untuk bagian kiri (Banner Section) */
+#banner {
+    flex: 1; /* Memanfaatkan ruang yang tersedia agar memenuhi setengah lebar halaman */
+    padding: 20px; /* Padding untuk memberi ruang di sekeliling konten */
+    overflow: hidden; /* Menghilangkan bagian gambar yang keluar dari wadah (kotak) */
+}
+
+/* ... (gaya CSS untuk elemen lain) ... */
+
+/* Gaya untuk sesi Packages */
+#packages {
+    flex: 1; /* Memanfaatkan ruang yang tersedia agar memenuhi setengah lebar halaman */
+    padding: 20px; /* Padding untuk memberi ruang di sekeliling konten */
+}
+  .slider {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Efek transisi slide dengan durasi 1 detik */
+    width: 100%; /* Menentukan lebar slider menjadi 100% dari container */
+  }
+  
+  .slider img {
+    width: 100%; /* Mengecilkan gambar agar sesuai dengan wadah slider */
+    flex-shrink: 0; /* Mencegah gambar menjadi lebih kecil daripada container slider */
+    margin-right: 10px; /* Memberi jarak antara gambar */
+  }
+  
+  .packages-intro p {
+    font-weight: bold;
+    color: black;
+  }
+
+  /* Gaya untuk bagian kanan (Section lain) */
+  #contact {
+    flex: 1; /* Memanfaatkan ruang yang tersedia agar memenuhi setengah lebar halaman */
+    padding: 20px; /* Padding untuk memberi ruang di sekeliling konten */
+    /* Tambahkan gaya sesuai konten yang ingin ditampilkan di bagian kanan */
+  }
+  /* Gaya untuk form container */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Gaya untuk judul "Contact Us" */
+  .form-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Gaya untuk label */
+  .form-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  /* Gaya untuk input dan select */
+  .form-container input,
+  .form-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  /* Gaya untuk tombol "Send" */
+  .form-container input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .form-container input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+/* Gaya dasar info box */
+.info-box {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 300px;
+  margin: 20px auto 0; /* Tambahkan 20px margin atas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateX(-30%);
+}
+
+/* Gaya gambar */
+.info-box img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Gaya teks */
+.info-details {
+  text-align: left;
+  margin-left: 15px;
+}
+
+.info-details h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.info-details p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Media query untuk tata letak mobile */
+@media (max-width: 768px) {
+  .info-box {
+    flex-direction: column; /* Menjadikan elemen dalam satu kolom di perangkat mobile */
+    max-width: 100%; /* Maksimum lebar elemen menjadi 100% lebar layar */
+    transform: translateX(0); /* Kembalikan posisi elemen ke tengah di perangkat mobile */
+  }
+
+  .info-box img {
+    margin-bottom: 10px; /* Memberi ruang antara gambar dan teks di perangkat mobile */
+  }
+}

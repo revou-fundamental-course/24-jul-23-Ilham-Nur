@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agent Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h1 class="navbar-title">Moqups</h1>
+        <ul>
+            <li><a href="#banner">Home</a></li>
+            <li><a href="#packages">Our Packages</a></li>
+            <li><a href="#contact">Call to Action</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="centered-text">Your Trusted Travel Agent's</h1>
+    <p class="centered-text gray-text">Your Happiness our happiness</p>
+
+<div class="content">
+    <!-- Bagian kiri: Banner Section -->
+    <section id="banner">
+        <div class="slider-container">
+          <div class="slider">
+            <img src="assets/image1.jpg" alt="Image 1" width="640" height="360">
+            <img src="assets/image2.jpg" alt="Image 2" width="640" height="360">
+            <img src="assets/image3.jpg" alt="Image 3" width="640" height="360">
+          </div>
+        </div>
+        <br>
+        <i>"Liburan menjadi asik dengan dengan Travel Agenku"</i>
+
+        <div class="info-box">
+            <img src="assets/avatar.jpg" alt="Avatar">
+            <div class="info-details">
+              <h2>Ilham Nur</h2>
+              <i>Jl. Adhyaksa Baru No.40</i>
+            </div>
+          </div>
+           
+
+        <div id="packages" class="packages-intro">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+        </div>
+        <div class="packages-container">
+            <div class="package">
+                <h3>1. Adventure Package</h3>
+                <p>ELorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="package">
+                <h3>2. Relaxation Package</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="package">
+                <h3>3. Cultural Experience Package</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+      </section>
+   
+   <!-- Bagian kanan: Contact Section -->
+   <section id="contact">
+     <div class="form-container">
+         <h2>Contact Us</h2>
+         <form action="#" method="post" onsubmit="return validateForm()">
+             <label for="name">Name:</label>
+             <input type="text" id="name" name="name" required>
+ 
+             <label for="email">Email:</label>
+             <input type="email" id="email" name="email" required>
+ 
+             <label for="interest">Interested Destination:</label>
+             <select id="interest" name="interest">
+                 <option value="beach">Beach</option>
+                 <option value="mountain">Mountain</option>
+                 <option value="city">City</option>
+                 <option value="countryside">Countryside</option>
+             </select>
+ 
+             <input type="submit" value="Send">
+         </form>
+     </div>
+   </section>
+ </div>
+<script src="js/script.js"></script>
+</body>
+</html>
