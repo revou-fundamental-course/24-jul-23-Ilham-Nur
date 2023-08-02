@@ -1,28 +1,15 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const slider = document.querySelector('.slider');
-    const images = slider.querySelectorAll('img');
-    const imageWidth = images[0].clientWidth + 10; /* Lebar gambar ditambah jarak 10 piksel */
-    let currentPosition = 0;
-    let currentImageIndex = 0;
-    const intervalTime = 3000; /* Waktu (dalam milidetik) antara setiap perpindahan slide */
-  
-    function slideImages() {
-      currentPosition -= imageWidth;
-      currentImageIndex++;
-      
-      /* Jika sudah menampilkan gambar terakhir, kembali ke gambar pertama */
-      if (currentImageIndex >= images.length) {
-        currentPosition = 0;
-        currentImageIndex = 0;
-      }
-  
-      slider.style.transition = 'transform 1s ease-in-out';
-      slider.style.transform = `translateX(${currentPosition}px)`;
-    }
-  
-    /* Jalankan fungsi slideImages secara terus-menerus setiap intervalTime */
-    setInterval(slideImages, intervalTime);
-  });
+const slides = ["image1.jpg", "image2.jpg", "image3.jpg"];
+
+let currentSlide = 0;
+const slideImage = document.getElementById("slideshow");
+
+function changeSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    const slidePath = "assets/" + slides[currentSlide];
+    slideImage.src = slidePath;
+}
+
+setInterval(changeSlide, 5000);
 
   function validateForm() {
     const nameInput = document.getElementById('name');
@@ -54,4 +41,17 @@ document.addEventListener("DOMContentLoaded", function() {
     // Jika semua validasi berhasil, form akan dikirimkan
     return true;
   }
-  
+// Fungsi untuk menampilkan atau menyembunyikan menu
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("active");
+}
+
+// Fungsi untuk menutup menu saat link pada menu di-klik
+const menuLinks = document.querySelectorAll(".menu li a");
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    const menu = document.getElementById("menu");
+    menu.classList.remove("active");
+  });
+});

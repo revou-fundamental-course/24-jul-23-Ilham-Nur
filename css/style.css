@@ -45,6 +45,9 @@
     color: black;
   }
 
+  /* Gaya untuk menu yang muncul di sisi kanan (tampilan mobile) */
+
+
   /* Gaya untuk mengatur teks menjadi tebal pada h1 */
 h1 {
     font-weight: bold;
@@ -186,15 +189,208 @@ h1 {
   color: #666;
 }
 
-/* Media query untuk tata letak mobile */
-@media (max-width: 768px) {
-  .info-box {
-    flex-direction: column; /* Menjadikan elemen dalam satu kolom di perangkat mobile */
-    max-width: 100%; /* Maksimum lebar elemen menjadi 100% lebar layar */
-    transform: translateX(0); /* Kembalikan posisi elemen ke tengah di perangkat mobile */
+
+.jumbotron {
+  background-color: #f2f2f2;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Gaya untuk judul di dalam jumbotron */
+.jumbotron h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Gaya untuk teks di dalam jumbotron */
+.jumbotron p {
+  font-size: 18px;
+  color: #666;
+}
+
+
+/* Gaya dasar untuk card-container */
+.upper-container, .lower-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Gaya untuk kartu */
+.card {
+  background-color: #fff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Efek transisi saat dihover */
+  flex: 0 1 calc(33.333% - 20px); /* Atur lebar kartu agar 3 kartu dapat menempati 100% lebar kontainer */
+  /* Atur lebar kartu sesuai kebutuhan */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efek angkat kartu saat dihover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Efek bayangan saat dihover */
+}
+
+/* Gaya untuk gambar pada kartu */
+.card-img {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Gaya untuk judul pada kartu */
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Gaya untuk teks pada kartu */
+.card p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Gaya untuk tombol "call us" */
+button.call-button {
+  display: block; /* Mengubah tombol menjadi elemen block agar bisa diatur lebar */
+  margin: 10px auto; /* Agar tombol berada di tengah secara horizontal */
+  padding: 15px 30px; /* Perbesar tombol dengan padding */
+  font-size: 18px; /* Ukuran teks tombol */
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /* Efek transisi saat dihover */
+}
+
+button.call-button:hover {
+  background-color: #0056b3; /* Efek perubahan warna saat dihover */
+}
+
+/* Gaya untuk footer */
+.footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center; /* Menyimpan semua teks di tengah */
+}
+
+/* Gaya untuk teks pada footer */
+.footer p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0; /* Tambahkan jarak 5px di atas dan bawah setiap teks */
+}
+
+
+/* Gaya untuk tampilan mobile */
+@media (max-width: 360px) and (max-height: 800px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
   }
 
-  .info-box img {
-    margin-bottom: 10px; /* Memberi ruang antara gambar dan teks di perangkat mobile */
+  .navbar-title {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .menu.active {
+    display: block;
+  }
+
+  .menu li {
+    padding: 8px;
+  }
+
+  .menu li a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .line {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .hamburger.active .line:nth-child(1),
+  .hamburger.active .line:nth-child(3) {
+    transform: rotate(45deg);
+  }
+
+  .hamburger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  /* Konten */
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-box,
+  .form-container,
+  .jumbotron,
+  .upper-container,
+  .lower-container {
+    max-width: 100%;
+  }
+
+  .banner img {
+    width: 100%;
+  }
+
+  /* Package Cards */
+  .upper-container,
+  .lower-container {
+    flex-direction: column;
+  }
+
+  .card {
+    margin: 10px;
+    flex: 1 1 100%;
+  }
+
+  /* Footer */
+  .footer p {
+    font-size: 12px;
   }
 }
+

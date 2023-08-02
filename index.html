@@ -9,15 +9,20 @@
 
 
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <h1 class="navbar-title">Moqups</h1>
-        <ul>
-            <li><a href="#banner">Home</a></li>
-            <li><a href="#packages">Our Packages</a></li>
-            <li><a href="#contact">Call to Action</a></li>
-        </ul>
-    </nav>
+ <!-- Navigation Bar -->
+ <nav class="navbar">
+    <h1 class="navbar-title">Moqups</h1>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <ul class="menu" id="menu">
+        <li><a href="#banner">Home</a></li>
+        <li><a href="#ourpackages">Our Packages</a></li>
+        <li><a href="#call-us">Call to Action</a></li>
+    </ul>
+</nav>
 
     <h1 class="centered-text">Your Trusted Travel Agent's</h1>
     <p class="centered-text gray-text">Your Happiness our happiness</p>
@@ -25,13 +30,9 @@
 <div class="content">
     <!-- Bagian kiri: Banner Section -->
     <section id="banner">
-        <div class="slider-container">
-          <div class="slider">
-            <img src="assets/image1.jpg" alt="Image 1" width="640" height="360">
-            <img src="assets/image2.jpg" alt="Image 2" width="640" height="360">
-            <img src="assets/image3.jpg" alt="Image 3" width="640" height="360">
+        <div class="banner">
+            <img id="slideshow" src="assets/image1.jpg" alt="Banner" />
           </div>
-        </div>
         <br>
         <i>"Liburan menjadi asik dengan dengan Travel Agenku"</i>
 
@@ -42,9 +43,8 @@
               <i>Jl. Adhyaksa Baru No.40</i>
             </div>
           </div>
-           
-
-        <div id="packages" class="packages-intro">
+        
+        <div class="packages-intro">
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
         </div>
         <div class="packages-container">
@@ -86,6 +86,57 @@
      </div>
    </section>
  </div>
+
+ <div id="ourpackages" class="jumbotron">
+    <h1 class="centered-text">Our Packages</h1>
+</div>
+
+<div  class="upper-container">
+    <div class="card">
+        <img class="card-img" src="assets/bulb.png" alt="iconcard">
+        <h2>Bali</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, reprehenderit?</p>
+    </div>
+    <div class="card">
+        <img class="card-img" src="assets/bulb.png" alt="iconcard">
+        <h2>Lombok</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, reprehenderit?</p>
+    </div>
+    <div class="card">
+        <img class="card-img" src="assets/bulb.png" alt="iconcard">
+        <h2>Manado</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, reprehenderit?</p>
+    </div>
+</div>
+
+<div class="lower-container">
+    <div class="card">
+        <img class="card-img" src="assets/star.png" alt="iconcard">
+        <h2>Maluku</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, reprehenderit?</p>
+    </div>
+    <div class="card">
+        <img class="card-img" src="assets/star.png" alt="iconcard">
+        <h2>Yogyakarta</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, reprehenderit?</p>
+    </div>
+    <div class="card">
+        <img class="card-img" src="assets/star.png" alt="iconcard">
+        <h2>Batu</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, reprehenderit?</p>
+    </div>
+</div>
+
+<h1 id="call-us" class="centered-text">Sekian </h1>
+<p class="centered-text gray-text">ELorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+<button class="call-button">Call Us</button>
+
+<footer id="" class="footer">
+    <p class="centered-text">© 2023 Travel Agent Website. All rights reserved.</p>
+    <p class="centered-text">Address: Jl. Adhyaksa Baru No.40, Phone: 123-456-7890, Email: info@travelagent.com</p>
+</footer>
+
+
 <script src="js/script.js"></script>
 </body>
 </html>
